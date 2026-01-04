@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+
+    <style>
+        h1{
+            border: 5px solid black;
+            border-radius: 30px;
+            text-align: center;
+            background-color: antiquewhite;
+            margin: 70px;
+            padding: 10px;
+        }
+
+        #btn{
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: inline-block;
+        }
+
+        /* Container para centralizar o botão */
+        .btn-container{
+            display: flex;
+            justify-content: center;   /* centraliza horizontalmente */
+            margin-top: 20px;
+
+        }
+
+        .back{
+            background-color: gray;
+            margin: 30px;
+            max-width: 800px;
+            height: 200px;
+        }
+
+        p{
+            text-align: justify;
+            text-decoration: underline;
+            text-transform: capitalize;
+            text-indent: 50px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <h1>Lorem</h1>
+
+    <div id="img">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Eius, fugiat voluptas eaque nam vero officiis rerum adipisci, perferendis perspiciatis a ex? Nam reprehenderit excepturi
+        uo saepe cum consequatur libero nihil?</p>
+    </div>
+
+    <div class="back">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, unde! Rem nisi facere consequatur porro quia a molestiae? Consequatur totam quis aliquid commodi vitae ad, beatae ipsam voluptate quam aut?</p>
+    </div>
+
+    <!-- Botão centralizado -->
+    <div class="btn-container">
+        <a id="btn" href="#">Button</a>
+    </div>
+
+</body>
+</html>

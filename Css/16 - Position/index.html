@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Explicação Simples de position</title>
+  <style>
+    .caixa {
+      width: 100px;
+      height: 100px;
+      background: lightblue;
+      margin: 10px;
+    }
+
+    /* position: relative */
+    .relative {
+      position: relative;
+      top: 10px;
+      left: 20px;
+      background: orange;
+    }
+
+    /* position: absolute */
+    .container {
+      position: relative;
+      height: 150px;
+      border: 1px solid #000;
+    }
+    .absolute {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: red;
+    }
+
+    /* position: fixed */
+    .fixed {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      background: green;
+      color: white;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Explicação simples do CSS position</h1>
+
+  <h2>position: static (padrão)</h2>
+  <div class="caixa">Static</div>
+  <p>→ Não se move com top/left.</p>
+
+  <h2>position: relative</h2>
+  <div class="caixa relative">Relative</div>
+  <p>→ Move, mas ainda ocupa seu espaço original.</p>
+
+  <h2>position: absolute</h2>
+  <div class="container">
+    <div class="caixa absolute">Absolute</div>
+  </div>
+  <p>→ Sai do fluxo e fica preso ao elemento pai posicionado.</p>
+
+  <h2>position: fixed</h2>
+  <div class="fixed">Eu fico fixo</div>
+  <p>→ Fica preso à tela mesmo rolando.</p>
+
+</body>
+</html>

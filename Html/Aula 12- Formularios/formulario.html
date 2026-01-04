@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    
+    <h1>Formulario</h1>
+
+    <form>
+        <label for="name">Name:</label>
+        <input id="name" type="text" placeholder="Name" required>
+
+        <br><br>
+
+        <label for="pass">Password:</label>
+        <input id="pass" placeholder="Password" type="password">
+
+        <br><br>
+        
+        <label for="mail">Email:</label>
+        <input id="mail" placeholder="Email" type="email">
+
+        <br><br>
+
+        <h2>Car</h2>
+        <input type="radio" name="car" value="Volks" id="volks">
+        <label for="volks">Volks</label>
+        <br>
+        <input type="radio" name="car" value="Mercedez" id="mer">
+        <label for="mer">Mercedez</label>
+
+        <br><br>
+
+        <h2>Items</h2>
+        <input type="checkbox" name="gun" id="gun" value="gun">
+        <label for="gun">Gun</label>
+        <br>
+        <input type="checkbox" name="knife" id="knife" value="knife">
+        <label for="knife">Knife</label>
+
+        <br><br>
+
+        <h2>Cor</h2>
+        <select name="cor" id="cor">
+            <option value="cor0" selected disabled>Selecione uma cor</option>
+            <option value="cor">Vermelho</option>
+            <option value="cor2">Black</option>
+
+        </select>
+
+        <br><br>
+
+        <h2>Mensagem</h2>
+
+        <textarea name="are" id="are" placeholder="Digite uma mensagem" rows="7" cols="20"></textarea>
+
+        <br><br>
+        
+        <input id="sub" value="Submit" type="submit">
+    </form>
+    
+</body>
+</html>

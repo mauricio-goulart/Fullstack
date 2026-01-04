@@ -1,0 +1,21 @@
+*{
+    padding: 5px;
+}
+
+
+.center
+{
+    text-align: center;
+}
+
+.left
+{
+    text-align: left;
+    color: red;
+}
+
+#right
+{
+    text-align: right;
+    color: blue;
+}

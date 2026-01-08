@@ -1,0 +1,9 @@
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+header {
+  background-color: blue;
+}/*# sourceMappingURL=index.css.map */

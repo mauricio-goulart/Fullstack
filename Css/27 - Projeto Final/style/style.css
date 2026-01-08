@@ -163,6 +163,13 @@ body
     font-weight: bold;
 }
 
+.logo-header a:hover
+{
+    background-color: var(--cor-fundo);
+    color: var(--cor-destaque);
+    border: 1px solid var(--cor-destaque);
+}
+
 
 
 
@@ -171,20 +178,16 @@ body
 {
     flex: 40%;
     border-top: 1px solid var(--cor-destaque);
-    
-    /* ADICIONE ISSO: Garante que a div respeite a altura do pai (.header) */
     height: 100%; 
-    overflow: hidden; /* Corta qualquer coisa que tente sair da caixa */
+    overflow: hidden; 
 }
 
 .inicio img
 {
     width: 100%;
-    height: 100%;       /* Força a altura do container pai */
-    object-fit: cover;  /* Preenche sem distorcer */
-    
-    /* ADICIONE ESTA LINHA: */
-    object-position: center bottom; /* Alinha horizontalmente ao centro, verticalmente na base */
+    height: 100%;       
+    object-fit: cover;  
+    object-position: center bottom; 
     
     display: block;
 }

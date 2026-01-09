@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sintaxe JS</title>
+</head>
+<body>
+    <h1>Sintaxe JS</h1>
+
+    <script>
+        // Comentário de uma linha
+
+        /*
+            Comentário
+            de múltiplas
+            linhas
+        */
+
+        // Declaração de variáveis
+        var nome = "João"; // variável global ou de função
+        let idade = 25;    // variável de bloco
+        const pi = 3.14;  // constante
+
+        // Tipos de dados
+        let numero = 10;          // Número
+        let texto = "Olá, mundo!"; // String
+        let booleano = true;      // Booleano
+        let nulo = null;          // Nulo
+        let indefinido;           // Indefinido
+        let objeto = {            // Objeto
+            chave: "valor"
+        };
+        let array = [1, 2, 3];   // Array
+
+        // Estruturas de controle
+        if (idade >= 18) {
+            console.log("Maior de idade");
+        } else {
+            console.log("Menor de idade");
+        }
+
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+
+        // Função
+        function saudacao(nome) {
+            return "Olá, " + nome + "!";
+        }
+
+        console.log(saudacao("Maria"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcoes em JS</title>
+</head>
+<body>
+    <h1>Funcoes em JS</h1>
+
+    <button onclick="alert(saudacao('Mauricio'))">Clique</button>
+
+    <script>
+        // Declaração de função tradicional
+        function saudacao(nome) {
+            return `Olá, ${nome}!`;
+        }
+
+        console.log(saudacao("Mauricio")); 
+
+        // Função anônima atribuída a uma variável
+        const despedida = function(nome) {
+            return `Adeus, ${nome}!`;
+        };
+
+        console.log(despedida("João")); // Adeus, João!
+
+        // Função arrow
+        const multiplicar = (a, b) => a * b;
+
+        console.log(multiplicar(3, 4)); // 12
+
+        // Função com valor padrão
+        function potencia(base, expoente = 2) {
+            return Math.pow(base, expoente);
+        }
+
+        console.log(potencia(5)); // 25
+        console.log(potencia(5, 3)); // 125
+
+        // Função imediata (IIFE)
+        (function() {
+            console.log("Esta função é executada imediatamente!");
+        })();
+    </script>
+</body>
+</html>

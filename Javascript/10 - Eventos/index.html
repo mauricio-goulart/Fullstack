@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Eventos JS</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; transition: background 0.5s; }
+        section { margin-bottom: 20px; padding: 15px; border: 1px solid #ccc; background: white; border-radius: 8px; }
+        button, input, select { padding: 10px; margin: 5px 0; cursor: pointer; }
+        #box { width: 100px; height: 100px; background-color: coral; color: white; display: flex; align-items: center; justify-content: center; text-align: center; cursor: pointer; }
+        #log-area { background: #333; color: #0f0; padding: 10px; height: 100px; overflow-y: scroll; font-family: monospace; }
+    </style>
+</head>
+<body onload="carregouPagina()">
+
+    <h1>Principais Eventos em JavaScript</h1>
+
+    <div id="log-area">Aguardando ações...</div>
+
+    <section>
+        <h3>1. Eventos de Mouse</h3>
+        
+        <button onclick="clickBack()">Clique Único (Muda Fundo)</button>
+        
+        <button ondblclick="duploClique()">Clique Duplo Aqui</button>
+
+        <br><br>
+        
+        <div id="box" 
+             onmouseenter="entrouMouse()" 
+             onmouseleave="saiuMouse()"
+             onmousemove="moveuMouse()">
+            Passe o mouse
+        </div>
+    </section>
+
+    <section>
+        <h3>2. Eventos de Teclado</h3>
+        <p>Digite algo abaixo:</p>
+        
+        <input type="text" 
+               placeholder="Digite aqui..." 
+               onkeydown="teclaDesceu()" 
+               onkeyup="teclaSubiu()">
+    </section>
+
+    <section>
+        <h3>3. Eventos de Formulário (Focus/Blur/Change)</h3>
+        
+        <input type="text" 
+               placeholder="Foque e depois saia..." 
+               onfocus="focou()" 
+               onblur="desfocou()">
+
+        <br><br>
+
+        <select onchange="mudouOpcao(this)">
+            <option value="">Selecione uma cor...</option>
+            <option value="red">Vermelho</option>
+            <option value="green">Verde</option>
+            <option value="gold">Dourado</option>
+        </select>
+    </section>
+
+    <script>
+        // Função auxiliar apenas para escrever na tela preta
+        function log(texto) {
+            const area = document.getElementById('log-area');
+            area.innerHTML += `> ${texto}<br>`;
+            area.scrollTop = area.scrollHeight; // Rola para baixo automaticamente
+        }
+
+        // --- Funções de Mouse ---
+        
+        function clickBack() {
+            // Seu código original melhorado para alternar cores
+            let corAtual = document.body.style.background;
+            document.body.style.background = corAtual === "lightblue" ? "white" : "lightblue";
+            log("Evento: onclick (Clicou no botão)");
+        }
+
+        function duploClique() {
+            alert("Você deu um clique duplo!");
+            log("Evento: ondblclick (Clique duplo)");
+        }
+
+        function entrouMouse() {
+            document.getElementById("box").style.backgroundColor = "blue";
+            log("Evento: onmouseenter (Mouse entrou na caixa)");
+        }
+
+        function saiuMouse() {
+            document.getElementById("box").style.backgroundColor = "coral";
+            log("Evento: onmouseleave (Mouse saiu da caixa)");
+        }
+
+        function moveuMouse() {
+            // Cuidado: esse evento dispara muitas vezes!
+            // log("Mouse movendo..."); 
+        }
+
+        // --- Funções de Teclado ---
+
+        function teclaDesceu() {
+            log("Evento: onkeydown (Tecla pressionada)");
+        }
+
+        function teclaSubiu() {
+            log("Evento: onkeyup (Tecla solta)");
+        }
+
+        // --- Funções de Formulário ---
+
+        function focou() {
+            log("Evento: onfocus (Campo em foco)");
+            document.activeElement.style.background = "#ffffcc";
+        }
+
+        function desfocou() {
+            log("Evento: onblur (Campo perdeu foco)");
+            document.activeElement.style.background = "white";
+        }
+
+        function mudouOpcao(elemento) {
+            let corEscolhida = elemento.value;
+            if(corEscolhida) {
+                document.body.style.background = corEscolhida;
+                log(`Evento: onchange (Mudou para ${corEscolhida})`);
+            }
+        }
+
+        // --- Função de Janela ---
+
+        function carregouPagina() {
+            log("Evento: onload (Página carregada com sucesso!)");
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <h1>Objetos em JS</h1>
+
+    <script>
+        // Criação de um objeto simples
+        const pessoa = {
+            nome: "Ana",
+            idade: 28,
+            profissao: "Engenheira"
+        };
+
+        console.log(pessoa.nome); // Ana
+        console.log(pessoa.idade); // 28
+
+        // Adicionando uma nova propriedade
+        pessoa.cidade = "São Paulo";
+        console.log(pessoa.cidade); // São Paulo
+
+        // Método dentro de um objeto
+        pessoa.apresentar = function() {
+            return `Olá, meu nome é ${this.nome} e eu sou ${this.profissao}.`;
+        };
+
+        console.log(pessoa.apresentar()); // Olá, meu nome é Ana e eu sou Engenheira.
+
+        // Objeto com propriedades aninhadas
+        const carro = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            especificacoes: {
+                ano: 2020,
+                cor: "Prata",
+                motor: "2.0L"
+            }
+        };
+
+        console.log(carro.especificacoes.ano); // 2020
+
+        // Iterando sobre as propriedades de um objeto
+        for (let chave in pessoa) {
+            console.log(`${chave}: ${pessoa[chave]}`);
+        }
+    </script>
+</body>
+</html>

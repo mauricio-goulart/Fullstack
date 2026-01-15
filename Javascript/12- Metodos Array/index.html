@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos Array</title>
+</head>
+<body>
+    <h1>Metodos Array</h1>
+    <p id="test"></p>
+
+    <script>
+        const frutas = ['Maçã', 'Banana', 'Laranja', 'Uva', 'Abacaxi']; 
+        const numeros = [10, 20, 30, 40, 50];
+
+        // Usando forEach para iterar sobre o array
+        frutas.forEach((fruta, index) => {
+            document.write(`<p>Fruta ${index + 1}: ${fruta}</p>`);
+        });
+        
+        document.getElementById('test').innerText = frutas.join('-');
+        document.getElementById('test').innerText = frutas.pop();
+        document.getElementById('test').innerText = frutas.push('Manga');
+        document.getElementById('test').innerText = frutas.shift();
+        document.getElementById('test').innerText = frutas.unshift('Morango');
+        document.getElementById('test').innerText = frutas.slice(1, 3);
+        document.getElementById('test').innerText = frutas.indexOf('Uva');
+
+        const superlist = frutas.concat(numeros);
+        document.getElementById('test').innerText = superlist;
+
+
+    </script>
+</body>
+</html>

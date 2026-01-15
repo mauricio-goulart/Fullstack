@@ -7,11 +7,48 @@
 </head>
 <body>
     <h1>Switch JS</h1>
+    <p id="test"></p>
+
+    <input id="cor" type="text">
+    <button onclick="changeColor()">Click me</button>
 
     <script>
         let day = 3;
         let dayName;
-        let p = document.createElement("p");
+        let p = document.getElementById("test");
+
+        function changeColor() {
+            let cor = document.getElementById("cor").value;
+
+            switch (cor) {
+                case "vermelho":
+                    document.body.style.backgroundColor = "red";
+                    break;
+                case "azul":
+                    document.body.style.backgroundColor = "blue";
+                    break;
+                case "verde":
+                    document.body.style.backgroundColor = "green";
+                    break;
+                default:
+                    p.innerHTML += "Cor não encontrada<br>";
+            }
+        }
+    
+
+        switch (cor) {
+            case "vermelho":
+                document.body.style.backgroundColor = "red";
+                break;
+            case "azul":
+                document.body.style.backgroundColor = "blue";
+                break;
+            case "verde":
+                document.body.style.backgroundColor = "green";
+                break;
+            default:
+                p.innerHTML += "Cor não encontrada<br>";
+        }
 
         switch (day) {
             case 1:
